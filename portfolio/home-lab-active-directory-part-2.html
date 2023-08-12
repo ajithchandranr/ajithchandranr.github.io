@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Active Directory in Home Lab (Part 2): Configuring Active Directory Services</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <!-- Favicons -->
+      <link href="../assets/img/favicon.png" rel="icon">
+      <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      <!-- Vendor CSS Files -->
+      <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+      <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+      <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <!-- Template Main CSS File -->
+      <link href="../assets/css/style.css" rel="stylesheet">
+      <!-- =======================================================
+         * Template Name: iPortfolio
+         * Updated: Mar 10 2023 with Bootstrap v5.2.3
+         * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+         * Author: BootstrapMade.com
+         * License: https://bootstrapmade.com/license/
+         ======================================================== -->
+   </head>
+   <body>
+      <!-- ======= Mobile nav toggle button ======= --> <i class="bi bi-list mobile-nav-toggle d-xl-none"></i> <!-- ======= Header ======= -->
+      <header id="header">
+         <div class="d-flex flex-column">
+            <div class="profile">
+               <img src="../assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+               <h1 class="text-light"><a href="../index.html">Ajith Chandarn</a></h1>
+               <div class="social-links mt-3 text-center"> <a href="https://github.com/ajithchandranr" class="github"><i class="bx bxl-github"></i></a> <a href="https://www.linkedin.com/in/ajithchandranr/" class="linkedin"><i class="bx bxl-linkedin"></i></a> <a href="https://twitter.com/ajith_kmr" class="twitter"><i class="bx bxl-twitter"></i></a> </div>
+            </div>
+         </div>
+         <div class="nav-menu-wrapper">
+            <nav id="navbar" class="nav-menu navbar">
+               <ul>
+                  <li><a href="../index.html#hero" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                  <li><a href="../index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                  <li><a href="../index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                  <li><a href="../index.html#portfolio" class="nav-link scrollto active"><i class="bx bxs-edit-alt"></i> <span>My Projects</span></a></li>
+                  <li><a href="../index.html#blog" class="nav-link scrollto"><i class="bx bxs-book-alt"></i> <span>Blog</span></a></li>
+                  <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+               </ul>
+            </nav>
+            <!-- .nav-menu -->
+         </div>
+      </header>
+      <!-- End Header -->
+      <div class="social-links-container">
+         <div class="social-links-2"> <a href="../index.html" class="home"><i class="bx bx-home"></i></a> <a href="https://github.com/ajithchandranr" class="github"><i class="bx bxl-github"></i></a> <a href="https://www.linkedin.com/in/ajithchandranr/" class="linkedin"><i class="bx bxl-linkedin"></i></a> <a href="https://twitter.com/ajith_kmr" class="twitter"><i class="bx bxl-twitter"></i></a> </div>
+      </div>
+      <main id="main">
+         <!-- ======= Breadcrumbs ======= -->
+         <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center">
+                  <h2>Project Details</h2>
+                  <ol>
+                     <li><a href="../index.html">Home</a></li>
+                     <li><a href="../index.html#portfolio">My Projects</a></li>
+                  </ol>
+               </div>
+            </div>
+         </section>
+         <!-- End Breadcrumbs -->
+         <!-- ======= Portfolio Details Section ======= -->
+         <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+               <div class="portfolio-description" style="margin-bottom: 40px;">
+                  <h2>Running Active Directory in Home Lab with Oracle VirtualBox (Part 2):</h2>
+                  <h2>Configuring Active Directory Services</h2>
+               </div>
+               <div class="row gy-4">
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 17px; margin-bottom: 25px;">Set up Active Directory Domain Services and Automate Domain Users Creation with PowerShell.</h6>
+                  </div>
+                  <div class="col-lg-8">
+                     <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+                           <div style="text-align: center;">
+                              <figure style="display: inline-block;">
+                                 <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad1.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad1.png" alt="Image 1" class="img-fluid"> </a>
+                                 <figcaption style="font-size: 14px;" style="display: block;">Figure 1 - Network Diagram  </figcaption>
+                              </figure>
+                           </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <section class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                           <li><strong>Title</strong>: Active Directory Home Lab</li>
+                           <li><strong>Organizer</strong>: Self</li>
+                           <li><strong>Project date</strong>: June, 2020</li>
+                           <li><strong>URL</strong>: <a href="https://ajithchandranr.github.io">ajithchandranr.github.io</a></li>
+                        </ul>
+                     </section>
+                     <article class="project-container">
+                        <div class="navigation">
+                           <div class="half-column">
+                              <div class="heading-button-container">
+                                 <h4 class="project-heading">Active Directory Home Lab (Part 1) : Windows Server Setup</h4>
+                                 <a class="prev-button" href="home-lab-active-directory-part-1.html">Previous</a>
+                              </div>
+                           </div>
+                           <div class="half-column">
+                              <div class="heading-button-container">
+                                 <h4 class="project-heading">Home Lab for Live Attack Demonstrations in SIEM</h4>
+                                 <a class="next-button" href="home-lab-siem-microsoft-sentinel.html">Next</a>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 17px; margin-bottom: 15px;">A domain controller functions as a server that oversees network access, verifies user credentials, and enforces security policies. It comprises essential elements that facilitate the operation of a Windows domain environment, including <b>Active Directory, LDAP, DNS, Certificate Services, Kerberos, Group Policy, and Network Time Protocol (NTP)</b>.</h6>
+                  </div>
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 17px; margin-bottom: 15px;"><b>Active Directory</b> serves as a centralized database responsible for storing and overseeing information pertaining to network resources, such as users, computers, and devices. It empowers administrators to efficiently manage access to these resources and effectively enforce security policies throughout the network. </h6>
+                  </div>
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 17px; margin-bottom: 15px;">Within the Active Directory, users and resources are represented as objects, each possessing a distinctive identifier known as a security identifier (SID). These objects are equipped with a collection of attributes that delineate their characteristics, encompassing details like their name, address, and security permissions.</h6>
+                  </div>
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 17px; margin-bottom: 20px;">In this article, our objective is to configure Active Directory services on the server set up in <b><em><a href="home-lab-active-directory-part-1.html">Part 1</a></em></b>. We'll also explore how to use PowerShell to automate the process of quickly creating 200 domain users, catering to the needs of a small business organization.</h6>
+                  </div>
+               </div>
+               <div class="col-lg-8" style="font-size: 30px; margin-bottom: 40px; margin-top: 20px; text-align: center; color: #149ddd;"> &nbsp;.&nbsp;.&nbsp;. </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 22px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">Active Directory Setup</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 25px;">To get started with installing Active Directory services and creating the forest root domain called <b><em>"mydomain.org",</em></b> we click on the <b>"Add roles and features"</b> option in the server's dashboard. This enables us to add the AD role and begin the setup process.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><em>When it comes to the server's role within a network, there's a difference between "roles" and "features." In this lab, the role refers to the server's specific function, which is acting as a domain controller with the Active Directory role. On the other hand, features are the extra capabilities that come along with the role, like AD administration tools, AD DS tools, Group Policy Management, and so on.</em></h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad2.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad2.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 2: Adding new roles and features. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Within the Setup Wizard, opt for the installation option labeled as "Role-based or feature-based." This choice is appropriate because the role will be added directly to the virtual machine, rather than being installed remotely via a Virtual Desktop Infrastructure (VDI). </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Proceed by choosing the server <b>"DC0"</b> from the list of available servers in the Server Pool. Once selected, click on the <b>"Next"</b> button to continue.</em></h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad3.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad3.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad4.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad4.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad5.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad5.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 3, 4 & 5 — Adding the role-based installation and selecting the Domain Controller (DC0) from the servers list. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">In the Server Roles section, check the box for <b>"Active Directory Domain Services"</b> and click on <b>"Add Features."</b> This will install the extra capabilities that come with this role.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad6.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad6.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad7.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad7.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 6 & 7 — Selecting the AD DS role and adding its features. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">In the <b>"Features"</b> and <b>"AD DS"</b> sections, there's no need to make any modifications. Simply click <b>"Next"</b> until you reach the <b>"Confirmation"</b> section. Once there, click on the <b>"Install"</b> button to initiate the installation of the services.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad8.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad8.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad9.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad9.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 8 & 9 — AD DS and Confirmation sections. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Once the installation process is finished, a notification will appear regarding the Post-deployment Configuration. This notification will inquire whether you wish to promote the server to a domain controller.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Click on the notification to initiate the Domain Controller configuration. From there, choose the option to <b>"Add a new forest"</b> and assign the name <b><em>"mydomain.com"</em></b> to the lab forest.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><i class='bx bxs-bulb' style='color:#149ddd'></i><b><em>A forest is a big container that holds all objects and configurations in the Active Directory structure ( ex: child domains, users, computers, groups, policies, schemas, etc.)-</em></b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Additionally, <b><em>a forest serves as a security boundary,</em></b> signifying that objects within separate Active Directory forests cannot interact with one another unless a trust relationship is established between the desired forests.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad10.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad10.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad11.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad11.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 10 & 11 — Promoting the server to a domain controller and creating a new forest. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Next, we verify that the <b>"Functional Forest level" </b>is set to <b><em>Windows 2016,</em></b> which represents the highest level accessible, and select a password for the <b>"Directory Services Restore Mode (DSRM)."</b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Regarding the <b>"DNS Options,"</b> we will leave the <b>"Create DNS Delegation"</b> option unchecked and proceed by clicking <b>"Next."</b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><i class='bx bxs-bulb' style='color:#149ddd'></i><b><em>The functional level is the capabilities that Active Directory supports,</em></b> and it also determines which Windows Server operating systems you can run on domain controllers in the forest. <b><em>The Windows 2016 functional level supports running Windows 2022 on the DC.</em></b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><i class='bx bxs-bulb' style='color:#149ddd'> </i> <b><em>Directory Services Restore Mode (DSRM)</em></b> is a special boot mode only available on the domain controller that allows the domain administrators to log into the domain controller using the DSRM password when the Active Directory fails. It is the local administrator account for the domain controller server.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><em>Safe mode grants Domain Administrators (DAs) access to the Active Directory database for the purpose of restoring or repairing objects.</em></h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad12.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad12.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad13.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad13.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 12 & 13 — Setting up the DSRM password for the domain controller and DNS Options. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Verify the <b>NetBIOS</b> domain name and click </b>“Next”</b> to move to the <b>“Paths”</b> section.</b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">The path locations specified are for the <em>Active Directory database (NTDS), the Log files, and the SYSVOL folder</em>. It is advisable to retain the default paths to avoid any potential issues in the future. We will proceed by clicking <b>"Next."</b> </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><i class='bx bxs-bulb' style='color:#149ddd'></i> <em><b>NTDS</b> is a database that stores Active Directory data, including information about users, computers, groups, and network resource objects.</em></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><i class='bx bxs-bulb' style='color:#149ddd'></i><em><b>SYSVOL</b> folder is situated directly on the domain controller, housing various public files, folders, and essential components like Group Policy Objects (GPOs) and scripts. These resources are utilized for effective management of domain users and computers within the forest.</em></h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad14.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad14.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad15.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad15.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad16.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad16.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 14, 15 & 16 — Settings for the NetBIOS and the location paths for the NTDS, Log files, and SYSVOL. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Now that we have everything set up for the Active Directory, we can get started with the installation process by simply clicking on the <b>"Install"</b> button in the <b>"Pre-requisite Check"</b> section. It'll only take a few seconds, and once it's done, you'll need to reboot your machine.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Once the machine has been restarted, we can proceed to the server dashboard and verify the presence of the newly created domain <b><em>"mydomain.com"</em></b>.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad17.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad17.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad18.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad18.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad19.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad19.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 17, 18 & 19 — Installing the AD DS, rebooting the server, and verifying the newly created domain. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Once Active Directory is installed, it's a good idea to take a snapshot of the current state before adding domain users. This will help preserve the system in its current configuration.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 22px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">Installing RAS/NAT</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">We will install <b>Remote Access Server (RAS)</b> and <b>Network Address Translation (NAT)</b> on the domain controller. This installation aims to enable our <b>Windows 10 client</b>, which we will set up later, to connect to a private virtual network while still having internet access through the domain controller.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"> This configuration ensures that our clients can effectively access the internet while connected to the private network using the <b>RAS</b> and <b>NAT</b> components installed on the domain controller. </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Launch <b>"Server Manager"</b> and select <b>"Add new roles and features."</b> Click 'Next' until reaching the <b>"Server Roles"</b> section. Choose <b>"Remote Access"</b> as the role. Proceed by clicking 'Next' to <b>"Role Services,"</b> select <b>"Routing,"</b> and click <b>"Add features."</b> Move to the <b>"Confirmation"</b> section, and click <b>"Install"</b> to begin the installation process.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad29.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad29.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad30.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad30.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad31.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad31.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 20, 21 & 22 — Adding new roles and features, selecting Server Roles and Routing option. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To complete the setup, open <b>"Server Manager"</b> and select <b>"Tools"</b> -> <b>"Routing and Remote Access."</b> Right-click on your domain controller (e.g., <b>"DC"</b>) and choose <b>"Configure and Enable Routing and Remote Access."</b> </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Follow the Setup wizard by selecting <b>"Next"</b> and choose <b>"Network Address Translation (NAT)."</b> In the NAT Internal Connection window, select the connection with internet access (e.g., <b>"External"</b>). Click <b>"Next"</b> and then <b>"Finish"</b> to successfully install <b>RAS/NAT</b>. </h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad32.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad32.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad33.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad33.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad34.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad34.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 23, 24 & 25 — Navigating to Routing and Remote Access, configuring RRAS, and selecting an NAT Internet connection. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 22px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">Setting Up a DHCP Server</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">We will be configuring a <b>DHCP server</b> on our domain controller, which will provide <b>IP addresses</b> to our <b>Windows 10 clients</b>. This setup will enable our clients to connect to the internet and browse websites, even though they are connected to a <em><b>private internal network</b></em>, similar to an office or school environment.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><i class='bx bxs-bulb' style='color:#149ddd'></i> <em><b>DHCP</b> stands for Dynamic Host Configuration Protocol. It is a network management protocol used to automatically assign IP addresses and other network configuration settings to devices on a network.</em></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Open <b>"Server Manager"</b> and navigate to the <b>"Add new roles and features"</b> option. Follow the on-screen instructions, clicking 'Next' until you reach the <b>"Server Roles"</b> section. From there, select <b>"Remote Access"</b> and click <b>"Add features"</b> to include it. Move forward to the <b>"Confirmation"</b> section, and initiate the installation by clicking <b>"Install."</b></h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad35.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad35.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad36.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad36.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad37.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad37.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 26, 27 & 28 — Adding new roles and features, selecting Server Roles and Installing DHCP Server. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">
+                     We're going to create a <b>DHCP scope</b> that will assign IP addresses in the range of <b><em>172.16.0.100 to 172.16.0.200</b></em>, using a subnet mask of <b><em>255.255.255.0.</em></b>
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Open<b> "Server Manager"</b> and look for the <b>"Tools"</b> option at the top-right corner. Click on it, and from the dropdown menu, select <b>"DHCP"</b> to access the <b>DHCP Server</b>. Once inside, expand the DHCP Server and right-click on the <b>"IPv4"</b> category. In the context menu, choose <b>"New Scope"</b> to begin creating a new scope.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Click "Next" and proceed to the <b>"Scope Name"</b> section. Since we are in a lab environment, we will assign the name <b><em>"172.16.0.100-200"</b></em> to the scope. Click "Next" to continue. For the <b>"IP Address Range"</b> configuration, set the <b>"Start IP address"</b> as <b><em>172.16.0.100</b></em> and the <b>"End IP address"</b> as <b><em>"172.16.0.200"</b></em>. Use a <b>"Length"</b> of <b><em>"24"</b></em> and a <b>"Subnet mask"</b> of <b><em>"255.255.255.0"</b></em>.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad38.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad38.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad39.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad39.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad40.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad40.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 29, 30 & 31 — Navigating to DHCP, creating New Scope, and assigning Start and End IP address and Subnet mask. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Continuing from the previous step, click <b>"Next"</b> through the <b>"Lease Duration"</b> section without making any changes, as we will leave the preferences as they are for this lab.
+                     In the <b>"Router (Default Gateway)"</b> section, enter the IP address of your Domain Controller as <em><b>"172.16.0.1"</em></b> in the <b>"IP address"</b> column. Click <b>"Add"</b> and then click <b>"Next"</b>.
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Moving on to the <b>"Domain Name and DNS Servers"</b> section, input <em><b>"mydomain.com"</em></b> in the <b>"Parent domain"</b> column since we are using the domain controller as our DNS server. Click <b>"Next"</b> to proceed. Keep the settings as they are until you reach the end of the wizard, and then click <b>"Finish"</b> to complete the <b>DHCP scope configuration.</b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Afterward, right-click on the <b>DHCP Server</b> and select <b>"Authorize".</b> Then, right-click again and choose <b>"Refresh"</b> to ensure the changes take effect.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><i class='bx bxs-bulb' style='color:#149ddd'></i> <em><b>Lease durations</b> determine the period for which devices are assigned IP addresses on a network. They specify how long an IP address is allocated before it needs to be renewed or released.</em>  </h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad41.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad41.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad42.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad42.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad43.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad43.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 32, 33 & 34 — Adding a default gateway, authorizing a new scope in the Domain Controller, and verifying the DHCP server setup. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 22px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">Adding Domain Users</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To add domain users, you have the option of manually adding them or using a PowerShell script like <em>CREATE_USERS.ps1</em> developed by <u><a href =" https://www.youtube.com/@JoshMadakor">Josh Madakor</a></u>, which creates multiple domain users in bulk</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 20px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">Method #1 Creating Domain Users Manually</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To create a new domain user, access the Server Dashboard, locate the <b>"Tools"</b> section, and select <b>"Active Directory Users and Computers."</b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">In the ADUC window, right-click on the domain name <b>"mydomain.com"</b> and choose <b>"New"</b> and then <b>"User"</b></h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad47.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad47.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad48.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad48.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 35 & 36 - Accessing the ADUC settings and selecting a new User Object.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Next, provide the necessary user information and set a password for the user. In a typical scenario, it is common to leave the <b><em>"User must change password at logon"</b></em> option checked. This allows the user to change their password when they log in to their account from their workstation for the first time.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To simplify management, for the lab, you can uncheck the box and enable the <b><em>"Password never expires"</b></em> option.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad49.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad49.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad50.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad50.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad51.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad51.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 37, 38, & 39 - Creating a new User Object.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 20px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">Method #2 Automating Domain Users Creation With PowerShell</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">The PowerShell script we will utilize, named <em>"Create Users</em>," generates numerous domain users with a default password of <b><em>"MS@6264"</b></em> and subsequently assigns them to a newly created Organizational Unit named <b><em>"_Users."</b></em> These domain users are created based on the list of names provided to the script. In the GitHub report, Jon employs a <em>names.txt</em> file containing a list of 1000 users to generate the domain accounts.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To suit the scale of our lab, I will customize the script to generate six  standard Organizational Units: <em>Marketing, Finance, Operations, Human Resources, Legal, and IT</em>. Additionally, the modified script will create <b><em>200 domain users.</b></em></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To begin, you can download the zip file from the <em><a href ="https://github.com/joshmadakor1/AD_PS/archive/refs/heads/master.zip">GitHub repository.</a></em> Before extracting the downloaded file, it is recommended to disable <b><em>Real-Time Monitoring</b></em> and set the <b><em>PowerShell Execution Policy</b></em> to <b><em>"Unrestricted."</b></em> I have also customized the script to align with my preferences.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="vpn-instructions">
+                     <p><strong>Disable Real-Time Monitoring:</strong></p>
+                     <p><code>Set-MpPreference -DisableRealtimeMonitoring $true -Verbose</code></p>
+                  </div>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="vpn-instructions">
+                     <p><strong>PowerShell Execution Policy</strong></p>
+                     <p><code>Set-ExecutionPolicy Unrestricted </code></p>
+                  </div>
+               </div>
+               <div class="col-lg-9" style="margin-bottom: 35px;">
+                  <div class="vpn-instructions">
+                     <pre>
+<code>
+    # ----- Edit these Variables for your own Use Case ----- #
+    $PASSWORD_FOR_USERS   = "MS@6264"
+    $USER_FIRST_LAST_LIST = Get-Content .\IT.txt
+    # ------------------------------------------------------ #
+    
+    $password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
+    New-ADOrganizationalUnit -Name IT -ProtectedFromAccidentalDeletion $false
+    
+    foreach ($n in $USER_FIRST_LAST_LIST) {
+        $first = $n.Split(" ")[0].ToLower()
+        $last = $n.Split(" ")[1].ToLower()
+        $username = "$($first.Substring(0,1))$($last)".ToLower()
+        Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+        
+        New-AdUser -AccountPassword $password `
+                   -GivenName $first `
+                   -Surname $last `
+                   -DisplayName $username `
+                   -Name $username `
+                   -EmployeeID $username `
+                   -PasswordNeverExpires $true `
+                   -Path "ou=IT,$(([ADSI]`"").distinguishedName)" `
+                   -Enabled $true
+    }
+                          </code>
+                        </pre>
+                  </div>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad52.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad52.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 40 — Disabling RTM and changing the PS Execution Policy to unrestricted. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To open the PowerShell script, open it in PowerShell Windows ISE as an <b>Administrator.</b> In the script, find the <span class="highlighted">$USER_FIRST_LAST_LIST</span> variable and input the file name containing the user's list. If you have divided your 200 domain users into different files based on Organizational Units, make sure to specify the corresponding file for each unit.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">
+                     I began by focusing on the <em>IT</em> department. I assigned the variable 
+                     <span class="highlighted">$USER_FIRST_LAST_LIST</span> 
+                     to the list of users in that department. Next, I replaced the 
+                     <span class="highlighted">New-ADOrganizationalUnit</span> 
+                     command, changing the destination from <b><em>_Users</b></em> to <b><em>IT</b></em> to create the OU specifically for the IT department. 
+                     Additionally, I modified the 
+                     <span class="highlighted">-Path</span> parameter to specify that the users should be added to the OU with the path 
+                     <span class="highlighted">ou=IT</span>.
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">After making the necessary changes to the script, simply save it and run it. This will create the domain users and add them to the specified <b>OU</b> as intended.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad53.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad53.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 41 — Creating new domain users and add them to the IT OU </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">If you wish to expand your lab setup, you can follow these steps to create additional Organizational Units and add users to them. Upon executing the script, return to the <em>Active Directory Users and Computers</em> window, where you will find the recently generated Organizational Units and domain users.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad54.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad54.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 42 — Newly created Organizational Units. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Given that we now have a sufficient number of users,  let's select an individual from the <b>IT OU</b> to be designated as the domain admin . </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To assign a User to a group like <b>“Domain Admins”</b>, select the desired user like<em> “Kcrist”</em>, right-click on their name, and select <b>“Properties”</b>.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To add a user to a specific group, navigate to the <b>"Member of"</b> tab. Click on the <b>"Add"</b> button and enter the name of the desired group in the <b>"Enter the object names"</b> box. For example, if you want to add the user to the <b>"Domain Admins"</b> group, type <b>"Domain Admins"</b> and click <b>"Check Names"</b> to validate the entry. Finally, click <b>"Ok"</b> to finalize the process. Once added, the user's membership in the new group will be displayed in the <b>"Member of"</b> list.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad56.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad56.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad57.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad57.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad58.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad58.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 43, 44, & 45 - Steps to add a user to a Domain Admin group.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 22px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">Adding a Client to Active Directory</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">We have successfully set up our users, configured the entire environment, and established key components. Our network diagram shows that our <em><b>Internet connection, NICs, domain with user setup, NAT, DHCP, and connection to the internal VMware network</em></b> are all in place.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">The last step is to create a <b>Windows 10</b> virtual machine in VirtualBox with an <em>internal</em> NIC. It will obtain its IP address from the configured DHCP server. After setting up the virtual machine, we'll confirm that it successfully receives the expected IP address from the DHCP server, ensuring the network setup is functioning properly.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 15px;">
+                     I followed the process outlined in 
+                     <em>
+                        <a href="home-lab-active-directory-part-1.html">Part 1: Windows Server 2022 Setup
+                        <a>
+                     </em>
+                     , naming the VM as <em>"CLIENT1"</em>. I progressed until I reached the <b>"Select the operating system you want to install"</b> screen in the Windows Setup, where I specifically chose <b>"Windows 10 Pro"</b> as the desired operating system. Continuing forward, I arrived at the <b>"Who's going to use this PC?"</b> page and entered <em><b>"user"</b></em> as the local username. Since a password was not required, I skipped that section and proceeded to finalize the setup process.
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+               <ul>
+               <li>
+               <h6 style="font-size: 16px; margin-bottom: 25px; "><b>Windows 10 </b> can be found on - <a href="https://www.microsoft.com/en-in/software-download/windows10"> Link<i class='bx bx-link' style='color: #149ddd; font-size: 22px;'></a></i></h6>                        
+               </ul>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad59.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad59.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad60.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad60.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad61.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad61.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 46, 47, & 48 - Creating 'CLIENT1' Virtual Machine </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><i class='bx bxs-bulb' style='color:#149ddd'></i><em> To ensure a smooth setup process for our lab, I recommend selecting <b>"Home"</b> when asked about the intended use of the PC. If prompted, choose the <b>"Limited Version"</b> and opt for creating a local account instead of a Microsoft account. It's important to note that the setup process may undergo changes periodically, so it's always a good practice to adapt accordingly.</em></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><i class='bx bxs-bulb' style='color:#149ddd'></i><em> In order to access resources on a Windows Server Domain, it is necessary to have Windows 10 Pro as the Home edition of Windows 10 does not support domain join.</em></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">After completing the setup, I checked was the functionality of the Internet connection and the correct assignment of <em>"IP address"</em> to the client PC. While I was able to ping <em>"www.google.com"</em>, I noticed that the IP address assigned to the client PC was that of the <b>"NAT (Home Network)"</b> instead of the <b>"Internal Network Adapter"</b> I intentionally configured. This configuration was set up to enable us to obtain a DHCP address from the domain controller, as we are attempting to simulate a corporate network environment.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad62.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad62.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 49 — Discovering that an incorrect IP address was assigned. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">This here situation called for some good ol' <b><em>troubleshooting</em></b>, partner.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">After a thorough examination, I uncovered an oversight in the VM configuration wherein I mistakenly chose <b>"NAT"</b> instead of <b>"Internal Network."</b> Realizing this error, I swiftly rectified the situation by switching it to <b>"Internal Network."</b> </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">I confirmed the accurate assignment of the <em>IP address</em> by executing the <em><b>"ipconfig"</em></b> command in the command prompt. Furthermore, I conducted a successful ping test to <em>google.com</em>, which indicated the operational status of our <b>DNS server</b> and established connectivity up to the domain controller, serving as the default gateway. With proper <em><b>Network Address Translation (NAT)</b></em> in place, the domain controller effectively forwarded the traffic to the internet, enabling the echo reply from the ping to reach us seamlessly. As a result, our network infrastructure, depicted in the network diagram, is functioning as expected.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad63.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad63.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad64.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad64.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 50 & 51 - Troubleshooting and verifying the correction.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">We are going to rename this PC and join the domain, <b>"right-click"</b> on the <b>"Start Menu"</b> and select <b>"System."</b> In the <b>"System"</b> window, locate the option labeled <b>"Rename this PC (advanced)"</b> and click on it to open the <b>"System Properties"</b> window. Within this window, click on the <b>"Change"</b> button.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">In the <b>"Computer Name/Domain Changes"</b> window, enter <b><em>"CLIENT1"</b></em> as the new PC name. Choose the <b>"Domain"</b> option and enter <b><em>"mydomain.com"</b></em> as the domain name. Apply the changes by clicking <b>"OK"</b> and provide the necessary administrative credentials to authenticate with the domain controller. Finally, restart the PC by selecting <b>"Restart Now"</b> to complete the domain join operation.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad65.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad65.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad66.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad66.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad67.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad67.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 52, 53, & 54 - Change the computer name and join it to the domain controller.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">In the <b>"Address Leases"</b> section of the <b>"DHCP scope"</b> on the <b>"Domain Controller"</b>, we can see that <em><b>CLIENT1</em></b> is listed. This indicates that when we added the client to the network, it automatically contacted the DHCP server and obtained an IP address assignment.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"> Also, In <b>"Active Directory Users and Computers"</b>, on the <b>"Domain Controller"</b>, when we go to the <b>"Computers"</b> container, we can see that the client computer automatically appears there after joining the domain, indicating its domain membership.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad68.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad68.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad69.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad69.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 55 & 56 - Confirming presence of 'CLIENT1' in DHCP and ADUC.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Since the client computer has joined the domain, we can use any of the <em>created accounts</em> to log in. Our next step is to proceed with logging into the computer using the username <b><em>"aabrev"</b></em> and password <b><em>"MS@6264"</b></em>.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad70.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad70.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad71.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad71.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 57 & 58- Logging in using a generated user account.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">We can observe that we are successfully logged in, and our desktop is functioning as expected. By accessing the command line and executing the <b><em>"who am i"</b></em> command, we can verify our domain membership and authenticate our username as <b><em>"aabrev</b></em>."</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-2/hl-p2-ad72.png"> <img src="assets/home-lab-active-directory-part-2/hl-p2-ad72.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 59  — Verifying username using the command prompt. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 20px;">In this <b>Project</b>, based on our network diagram, we have set up a <em>mini corporate network</em>. The account creation process mimics the hiring procedure and involves adding names to a batch file. Afterwards, the batch script executes and creates all the new accounts, including ours. Using the <b><em>CLIENT1</b></em> virtual machine as our corporate laptop, we can effortlessly log in with our corporate credentials since it is connected to both the domain and network.</h6>
+               </div>
+               <div class="col-lg-8" style="font-size: 30px; margin-bottom: 20px; margin-top: 20px; text-align: center; color: #149ddd;"> &nbsp;.&nbsp;.&nbsp;. </div>
+               <div class="col-lg-8">
+                  <article class="custom-project-container" style="margin-bottom: 20px;">
+                     <div class="custom-navigation">
+                        <div class="custom-half-column">
+                           <a href="home-lab-active-directory-part-1.html" class="custom-project-heading">
+                           Active Directory in Home Lab(Part 1): Windows Server 2022 Setup
+                           </a>
+                           <a class="custom-prev-button" href="home-lab-active-directory-part-1.html">Previous</a>
+                        </div>
+                        <div class="custom-half-column">
+                           <a href="home-lab-siem-microsoft-sentinel.html" class="custom-project-heading">
+                           Home Lab for Live Attack Demonstrations in SIEM
+                           </a>
+                           <a class="custom-next-button" href="home-lab-siem-microsoft-sentinel.html">Next</a>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+               <h6 style="font-size: 16px;">
+                  Thank you for taking the time to read this. I can be reached on 
+                  <div class="pill-tab-end"> <a href="https://www.twitter.com/ajith_kmr" class="pill-link-end"><i class="bx bxl-twitter"></i> twitter</a> </div>
+                  <div class="pill-tab-end"> <a href="https://www.linkedin.com/in/ajithchandranr/" class="pill-link-end"><i class="bx bxl-linkedin"></i> LinkedIn</a> </div>
+               </h6>
+            </div>
+            </div>
+            </div>
+         </section>
+         <!-- End Portfolio Details Section -->
+      </main>
+      <!-- End #main -->
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+         <div class="container">
+            <div class="copyright"> By <strong><span>Ajith Chandran</span></strong> </div>
+            <div class="credits"> Copyright © 2023 </div>
+         </div>
+      </footer>
+      <!-- End  Footer --> <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> <!-- Vendor JS Files -->
+      <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="../assets/vendor/aos/aos.js"></script>
+      <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="../assets/vendor/typed.js/typed.min.js"></script>
+      <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+      <script src="../assets/vendor/php-email-form/validate.js"></script> <!-- Template Main JS File -->
+      <script src="../assets/js/main.js"></script>
+   </body>
+</html>

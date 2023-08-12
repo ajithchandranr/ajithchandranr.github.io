@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title> Active Directory in Home Lab(Part 1): Windows Server 2022 Setup</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <!-- Favicons -->
+      <link href="../assets/img/favicon.png" rel="icon">
+      <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      <!-- Vendor CSS Files -->
+      <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+      <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+      <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <!-- Template Main CSS File -->
+      <link href="../assets/css/style.css" rel="stylesheet">
+      <!-- =======================================================
+         * Template Name: iPortfolio
+         * Updated: Mar 10 2023 with Bootstrap v5.2.3
+         * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+         * Author: BootstrapMade.com
+         * License: https://bootstrapmade.com/license/
+         ======================================================== -->
+   </head>
+   <body>
+      <!-- ======= Mobile nav toggle button ======= --> <i class="bi bi-list mobile-nav-toggle d-xl-none"></i> <!-- ======= Header ======= -->
+      <header id="header">
+         <div class="d-flex flex-column">
+            <div class="profile">
+               <img src="../assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+               <h1 class="text-light"><a href="../index.html">Ajith Chandarn</a></h1>
+               <div class="social-links mt-3 text-center"> <a href="https://github.com/ajithchandranr" class="github"><i class="bx bxl-github"></i></a> <a href="https://www.linkedin.com/in/ajithchandranr/" class="linkedin"><i class="bx bxl-linkedin"></i></a> <a href="https://twitter.com/ajith_kmr" class="twitter"><i class="bx bxl-twitter"></i></a> </div>
+            </div>
+         </div>
+         <div class="nav-menu-wrapper">
+            <nav id="navbar" class="nav-menu navbar">
+               <ul>
+                  <li><a href="../index.html#hero" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                  <li><a href="../index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                  <li><a href="../index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                  <li><a href="../index.html#portfolio" class="nav-link scrollto active"><i class="bx bxs-edit-alt"></i> <span>My Projects</span></a></li>
+                  <li><a href="../index.html#blog" class="nav-link scrollto"><i class="bx bxs-book-alt"></i> <span>Blog</span></a></li>
+                  <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+               </ul>
+            </nav>
+            <!-- .nav-menu -->
+         </div>
+      </header>
+      <!-- End Header -->
+      <div class="social-links-container">
+         <div class="social-links-2"> <a href="../index.html" class="home"><i class="bx bx-home"></i></a> <a href="https://github.com/ajithchandranr" class="github"><i class="bx bxl-github"></i></a> <a href="https://www.linkedin.com/in/ajithchandranr/" class="linkedin"><i class="bx bxl-linkedin"></i></a> <a href="https://twitter.com/ajith_kmr" class="twitter"><i class="bx bxl-twitter"></i></a> </div>
+      </div>
+      <main id="main">
+         <!-- ======= Breadcrumbs ======= -->
+         <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center">
+                  <h2>Project Details</h2>
+                  <ol>
+                     <li><a href="../index.html">Home</a></li>
+                     <li><a href="../index.html#portfolio">My Projects</a></li>
+                  </ol>
+               </div>
+            </div>
+         </section>
+         <!-- End Breadcrumbs -->
+         <!-- ======= Portfolio Details Section ======= -->
+         <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+               <div class="portfolio-description" style="margin-bottom: 30px;">
+                  <h2>Running Active Directory in Home Lab with Oracle VirtualBox (Part 1):</h2>
+                  <h2>Windows Server 2022 Setup</h2>
+               </div>
+               <div class="row gy-4">
+                  <div class="col-lg-8">
+                     <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+                           <div style="text-align: center;">
+                              <figure style="display: inline-block;">
+                                 <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad1.jpg"> <img src="assets/home-lab-active-directory-part-1/hl-ad1.jpg" alt="Image 1" class="img-fluid"> </a>
+                                 <figcaption style="font-size: 14px;" style="display: block;"></figcaption>
+                              </figure>
+                           </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <section class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                           <li><strong>Title</strong>: Active Directory Home Lab</li>
+                           <li><strong>Organizer</strong>: Self</li>
+                           <li><strong>Project date</strong>: June, 2023</li>
+                           <li><strong>URL</strong>: <a href="ajithchandranr.github.io">ajithchandranr.github.io</a></li>
+                        </ul>
+                     </section>
+                     <article class="project-container">
+                        <div class="navigation">
+                           <div class="half-column">
+                              <div class="heading-button-container">
+                                 <h4 class="project-heading">Tier 1: Responder - Hack The Box Starting Point</h4>
+                                 <a class="prev-button" href="hackthebox-responder.html">Previous</a>
+                              </div>
+                           </div>
+                           <div class="half-column">
+                              <div class="heading-button-container">
+                                 <h4 class="project-heading">Active Directory Home Lab (Part 2) : Configuring Active Directory Services</h4>
+                                 <a class="next-button" href="home-lab-active-directory-part-2.html">Next</a>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 17px; margin-bottom: 0px;"><b>Active Directory</b> plays a vital role in internal penetration testing as it is widely used in Windows infrastructures by many organizations. As security enthusiasts, it's important for us to delve into this technology, grasp its ins and outs, and explore the various attacks that can be launched against it.</h6>
+                  </div>
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 17px; margin-bottom: 0px;">To prevent this post from becoming overly extensive, I'll break it down into segments, each focusing on the setup and configuration of specific aspects of the lab. Today's article will tackle the initial phase, which involves setting up the Windows Server 2022. </h6>
+                  </div>
+                  <div class="col-lg-8">
+                     <h6 style="font-size: 17px;">Now, without further ado, let's get started <i class='bx bx-run' style='color:#149ddd'> </i><i class='bx bx-run' style='color:#149ddd'> </i><i class='bx bx-run' style='color:#149ddd'> </i><i class='bx bx-run' style='color:#149ddd'></i> </h6>
+                  </div>
+               </div>
+               <div class="col-lg-8" style="font-size: 30px; margin-bottom: 40px; margin-top: 20px; text-align: center; color: #149ddd;"> &nbsp;.&nbsp;.&nbsp;. </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 22px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">Lab Requirements</h6>
+               </div>
+               <div class="col-lg-8">
+                  <ul>
+                     <li>
+                        <h6 style="font-size: 16px; margin-bottom: 15px; "><b>Virtualization Software:</b> <a href="https://www.virtualbox.org/wiki/Downloads"><em>Oracle VirtualBox</em> <em>and Oracle VM VirtualBox Extension Pack</em></a> <em>(options can be <a href="https://www.vmware.com/products/workstation-player.html">VMware Player</a>, or <a href="https://store-us.vmware.com/workstation_buy_dual">VMware Workstation Pro</a>)</em></h6>
+                     </li>
+                     <li>
+                        <h6 style="font-size: 16px; margin-bottom: 15px; "><b>Windows Server 2022</b>. The evaluation copy can be found on the Microsoft Evaluation Center <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022"> Link<i class='bx bx-link' style='color: #149ddd; font-size: 22px;'></a></i></h6>
+                  </ul>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 15px;"><em><i class='bx bxs-bulb' style='color:#149ddd'></i> Virtual Box and VMware Player are free to download.</em></h6>
+               </div>
+               <div class="col-lg-8" style="font-size: 30px; margin-bottom: 40px; margin-top: 20px; text-align: center; color: #149ddd;"> &nbsp;.&nbsp;.&nbsp;. </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 22px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">Windows Server 2022 Setup</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 25px;">Once the ISO file is obtained from the Microsoft Evaluation Center, the next step involves setting up a new virtual machine. I am using Oracle VirtualBox for the lab.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 20px; margin-bottom: 0px; font-weight: bold; margin-bottom: 15px;">The VM specifications:</h6>
+               </div>
+               <div class="col-lg-8">
+                  <ul>
+                     <li>
+                        <h6 style="font-size: 16px; margin-bottom: 15px; ">Processors: 2
+                     </li>
+                     </H6>
+                     <li>
+                        <h6 style="font-size: 16px; margin-bottom: 15px; ">RAM: 2 GB
+                     </li>
+                     </H6>
+                     <li>
+                        <h6 style="font-size: 16px; margin-bottom: 25px; ">Disk Size: a minimum of 20 GB
+                     </li>
+                     </H6>
+                  </ul>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">1. To create a new virtual machine, begin by clicking on Oracle VirtualBox<b>"New"</b>. Then, access the drop-down menu next to <b>"ISO Image"</b> and select the <b>"Windows Server ISO file"</b> you have downloaded. Additionally, you can choose the "Skip Unattended Installation" option to speed-up the setup process.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 10px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad4.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad4.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad5.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad5.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 1 & 2 - Creating a New Virtual Machine on Oracle VirtualBox and selecting selecting the server 2022 ISO. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 25px;">2. Next, we proceed to configure the "Hardware Specifications" for the virtual machine. As we are setting up a server with a higher workload compared to a typical workstation, we will allocate two (2) virtual processors to ensure optimal performance.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Furthermore, we will assign the virtual machine a memory capacity of "2 GB", which will provide ample resources for the lab activities we will undertake.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 10px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad6.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad6.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad7.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad7.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 3 & 4 - Customizing the CPU, Memory and Storage requirements. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">3. Next, we will proceed with the finalization of the VM initialization setup by clicking on the "Finish" button.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 10px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad8.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad8.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad9.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad9.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 5 & 6 - VM initialization setup. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">4. Prior to powering on the VM, let's access the <b>"Settings"</b> and make a few changes. In the <b>"Advanced"</b> section, set both <b>"Share Clipboard"</b> and <b>"Drag and Drop"</b> to <b>"Bi-Directional."</b> This allows you to easily copy and paste text (Ctrl+C, Ctrl+V) and transfer files by dragging and dropping between your host computer and the virtual machine.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad10.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad10.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 7: Enabling the Shared Clipboard and Drag'n'Drop options in the VM. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">5. For the <b>“Network Settings"</b>, we will have <b>two network adapters;</b> one is connected to the outside internet, and the other is connected to the private lab network. </h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <ul>
+                     <li>
+                        <h6 style="font-size: 16px; margin-bottom: 15px; "><b>Adapter #1 — NAT connects to the internet</b>
+                     </li>
+                     </H6>
+                     <li>
+                        <h6 style="font-size: 16px; margin-bottom: 15px; "><b>Adapter #2 — intnet connects to the private network lab</b>
+                     </li>
+                     </H6>
+                  </ul>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 10px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad11.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad11.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad12.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad12.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 8 & 9 - Setting up multiple network adapters within Oracle VirtualBox environment. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">6. Now, power on the virtual machine. </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Once the Operating System Wizard pops up, click on "Next" and then "Install Now" to kick off the installation process. </h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad13.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad13.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad14.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad14.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad15.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad15.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 10,11 & 12 - Initial Installation messages. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">7. Among the available installation choices, there are four options to consider. Two of them, labeled as "Desktop Experience," offer a comprehensive graphical user interface, while the remaining two do not. Our selection will be the second option, specifically "Standard Evaluation (Desktop Experience).</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad16.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad16.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 13 — Selecting the second option “Standard Evaluation (Desktop Experience)” option. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"><em><i class='bx bxs-bulb' style='color:#149ddd'></i> <u> <a href="https://www.licenseware.io/microsoft-windows-server-2022-licensing-guide/">The Microsoft Windows Server 2022 licensing guide</a></em></u> provides an explanation of the differences between the two options.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">8. Tick the box for <b>"Microsoft Software License Terms"</b> and proceed by clicking <b>"Next."</b> Given that we are performing a fresh installation of the operating system, we will opt for the <b>"Custom"</b> option. Then, we will select the <b>"Drive0 Unallocated Space"</b> to install the system files.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad17.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad17.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad18.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad18.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad19.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad19.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 14, 15 & 16 — Microsoft license and disk partitioning screens. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">9. Following that, Windows will commence the installation of the operating system files, typically taking a few minutes to finalize the process. Once completed, the server will automatically reboot to implement the necessary configurations and settings.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"> Upon reboot, you will encounter the <em><b>"Customized Settings"</b></em> screen, where you can establish the password for the local built-in Administrator account.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 10px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad20.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad20.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad21.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad21.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 17 & 18 — Windows begins the installation process and after the reboot screen.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">10. In a virtual machine (VM) environment, the conventional method of pressing <b>Ctrl+Alt+Delete</b> may not function as expected. Instead, to unlock the system, you can either navigate to <b>"Input"</b> then <b>"Keyboard"</b> and choose <b> "Insert Ctrl+Alt+Del",</b> or use the keyboard shortcut <b>"Ctrl (left) + Del</b>".</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad22.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad22.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 19 — Choosing the option to access login screen. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">11. After logging into the server, we will start configuring a few things before installing Active Directory Services. First task will be to install the <b>VM Guest Additions</b>. This software enhances the overall user experience within the virtual machine. Currently, you may notice some mouse lag on the screen, which can be resolved by installing the Guest Additions. Additionally, when enlarging the VM window, the screen itself does not adjust accordingly, which can also be rectified by installing the Guest Additions.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To locate the installation file, start by navigating to the <b>"Devices"</b> menu and selecting <b>"Insert Guest Additions CD Image..."</b>. Then, open the <b>"File Explorer"</b> and access the specific <br><b>"CD Drive(referenced by its drive address, e.g., "D:"): VirtualBox Guest Additions"</b>. Inside that CD Drive, you can locate the file named <b>"VBoxWindowsAdditions-amd64"</b> .</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad23.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad23.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad24.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad24.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad25.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad25.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 20, 21 & 22 — Mounting CD Drive(D:) VirtualBox Guest Additions and locating the installation file. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">11. Open the VBoxWindowsAdditions-amd64 file and proceed by clicking <b>"Next"</b> to initiate the installation. Follow the prompts and complete the installation process. Once finished, choose the <b>"Reboot Now"</b> option to finalize the installation and reboot the system.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad26.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad26.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad27.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad27.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad28.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad28.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 23, 24 & 25 — Installing VM Guest Additions and rebooting. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">12. In the following step, we will proceed with configuring the two network adapters that were added during the initial setup of the virtual machine. To begin, navigate to the<b> "Settings"</b> page, then click on the <b>"Network and Internet"</b> section, and select <b>"Change Adapter Options</b>."</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"> For the first adapter, labelled as <b>"Ethernet0,"</b> we will keep it unchanged on the <b>NAT</b> network, allowing it to acquire an IP address from the home router. In my case, it is assigned to the <b>10.0.2.15/24</b> subnet. </h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"> We will rename the adapters one to <b>External</b> and the other to<b>Internal</b> to distinguish between the networks. </h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 10px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad29.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad29.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad30.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad30.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 26 & 27 — Renaming the NAT network to External (internet).</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">13. To configure the Internal network adapter, I have chosen the <b>172.16.0.0/24</b> range. Consequently, I have assigned the server an IP address of <b>172.16.0.1</b> and a subnet mask of "255.255.255.0".</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">As the server IP will eventually become the domain controller after installing Active Directory services and promoting it, the Default Gateway field remains empty. This is because the Domain Controller itself will act as the gateway.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">For the DNS, we assign it the DC address, which is <b>172.16.0.1</b>, or a loopback of <b>127.0.0.1</b> so it pings itself. Both ways are correct.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad32.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad32.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad33.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad33.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad34.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad34.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 28, 29 & 30 — Setting up the internal private network. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">Once you have finished configuring the IP settings, navigate to the <b>"Server Manager"</b> and update the <b>"Local Server"</b> dashboard. By doing so, you will be able to view the IP address assigned to the server.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad35.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad35.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 31 — Internal network IP is assigned to 172.16.0.1. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">14. Changing the <b>"Time Zone" </b>to your location is an optional step. While the Time Zone itself is not necessary, it is important to ensure that the server's <b>"Time and Date"</b> are accurately set.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">To promote this server to a domain controller, it is crucial to ensure that the server time is synchronized with the workstations. This synchronization is essential for the proper functioning of the Kerberos protocol, which relies on accurate time settings to issue tickets.</h6>
+               </div>
+               <div class="col-lg-8" style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center;">
+                           <figure style="display: inline-block;">
+                              <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad36.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad36.png" alt="Image 1" class="img-fluid"> </a>
+                              <figcaption style="font-size: 14px;">Figure 32 — changing the server Time Zone. </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">15. The last step is to rename the server to something meaningful; since it will be the domain controller in the domain. I called it <b>"DC"</b></h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">And restart the server to apply changes.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad37.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad37.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block; margin-right: 5px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad38.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad38.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad39.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad39.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 33, 34 & 35 — Steps to rename the server computer name. </figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"> After restarting the server, log in to it and verify that the changes have been successfully implemented. Then, create a snapshot of the machine with the updated configuration.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;">&#128680; Having a snapshot of the current VM state before installing Active Directory is crucial. In the event that you encounter any issues during the process and make a mistake, you can easily revert back to the initial state and start again from there. </h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 10px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad40.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad40.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad41.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad41.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 36 & 37 — Steps to take a Snapshot of the current VM state.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"> To check the snapshot, <b>"select the VM"</b> and click on the <b>"three bars"</b> next to it. Then, choose <b>"Snapshots"</b> from the menu.</h6>
+               </div>
+               <div style="margin-bottom: 35px;">
+                  <div class="portfolio-details-slider swiper">
+                     <div class="swiper-wrapper align-items-center">
+                        <div style="text-align: center; display: flex;">
+                           <figure style="display: inline-block; margin-right: 10px;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad42.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad42.png" alt="Image 1" class="img-fluid"> </a> </figure>
+                           <figure style="display: inline-block;"> <a href="javascript:;" class="zoom-icon" data-image="assets/home-lab-active-directory-part-1/hl-ad43.png"> <img src="assets/home-lab-active-directory-part-1/hl-ad43.png" alt="Image 2" class="img-fluid"> </a> </figure>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center;">
+                     <figcaption style="font-size: 14px;">Figures 38 & 39 — Confirming the creation of the VM snapshot.</figcaption>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <h6 style="font-size: 17px; margin-bottom: 35px;"> In the next post, we will focus on the installation of Active Directory services, configuring DNS and DHCP services, and utilizing PowerShell to add users.</h6>
+               </div>
+               <div class="col-lg-8">
+                  <article class="custom-project-container" style="margin-bottom: 20px;">
+                     <div class="custom-navigation">
+                        <div class="custom-half-column">
+                           <a href="hackthebox-responder.html" class="custom-project-heading">
+                           Tier 1: Responder - Hack The Box Starting Point
+                           </a>
+                           <a class="custom-prev-button" href="hackthebox-responder.html">Previous</a>
+                        </div>
+                        <div class="custom-half-column">
+                           <a href="home-lab-active-directory-part-2.html" class="custom-project-heading">
+                           Active Directory Home Lab (Part 2) : Configuring Active Directory Services
+                           <a class="custom-next-button" href="home-lab-active-directory-part-2.html">Next</a>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+               <div class="col-lg-8" style="font-size: 30px; margin-bottom: 40px; margin-top: 20px; text-align: center; color: #149ddd;"> &nbsp;.&nbsp;.&nbsp;. </div>
+               <h6 style="font-size: 16px;">
+                  Thank you for taking the time to read this. I can be reached on 
+                  <div class="pill-tab-end"> <a href="https://www.twitter.com/ajith_kmr" class="pill-link-end"><i class="bx bxl-twitter"></i> twitter</a> </div>
+                  <div class="pill-tab-end"> <a href="https://www.linkedin.com/in/ajithchandranr/" class="pill-link-end"><i class="bx bxl-linkedin"></i> LinkedIn</a> </div>
+               </h6>
+            </div>
+            </div>
+            </div>
+         </section>
+         <!-- End Portfolio Details Section -->
+      </main>
+      <!-- End #main -->
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+         <div class="container">
+            <div class="copyright"> By <strong><span>Ajith Chandran</span></strong> </div>
+            <div class="credits"> Copyright © 2023 </div>
+         </div>
+      </footer>
+      <!-- End  Footer --> <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> <!-- Vendor JS Files -->
+      <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="../assets/vendor/aos/aos.js"></script>
+      <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="../assets/vendor/typed.js/typed.min.js"></script>
+      <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+      <script src="../assets/vendor/php-email-form/validate.js"></script> <!-- Template Main JS File -->
+      <script src="../assets/js/main.js"></script>
+   </body>
+</html>
