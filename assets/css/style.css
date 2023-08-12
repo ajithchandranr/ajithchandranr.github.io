@@ -1,0 +1,1412 @@
+/**
+* Template Name: iPortfolio
+* Updated: Mar 10 2023 with Bootstrap v5.2.3
+* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #272829;
+    }
+    a {
+    color: #149ddd;
+    text-decoration: none;
+    }
+    a:hover {
+    color: #37b3ed;
+    text-decoration: none;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    font-family: "Raleway", sans-serif;
+    }
+    /*--------------------------------------------------------------
+    # Back to top button
+    --------------------------------------------------------------*/
+    .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #149ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    }
+    .back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+    }
+    .back-to-top:hover {
+    background: #2eafec;
+    color: #fff;
+    }
+    .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+    }
+    /*--------------------------------------------------------------
+    # Header
+    --------------------------------------------------------------*/
+    #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+    background: #040b14;
+    overflow-y: auto;
+    }
+    #header .profile img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid #2c2f3f;
+    }
+    #header .profile h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    font-family: "Poppins", sans-serif;
+    }
+    #header .profile h1 a,
+    #header .profile h1 a:hover {
+    color: #fff;
+    text-decoration: none;
+    }
+    #header .profile .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #212431;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    }
+    .social-links-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4.7%;
+    margin-bottom: 1.6%;
+    margin-right: 21%;
+    }
+    .social-links-2 a {
+    margin: 0 10px;
+    color: #149ddd;
+    text-decoration: none;
+    }
+    .social-links-2 i {
+    font-size: 18px;
+    }
+    .social-links-2 .home {
+    position: absolute; /* Position the .home link absolutely */
+    left: 5px; 
+    }
+    /* Media query to hide social-links-2 on desktop */
+    @media (min-width: 768px) {
+    .social-links-container {
+    display: none;
+    }
+    }
+    #header .profile .social-links a:hover {
+    background: #149ddd;
+    color: #fff;
+    text-decoration: none;
+    }
+    #main {
+    margin-left: 300px;
+    }
+    @media (max-width: 1199px) {
+    #header {
+    left: -300px;
+    }
+    #main {
+    margin-left: 0;
+    }
+    }
+    /* Styles for navigation, buttons, and headings */
+    .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end; /* Align items at the bottom */
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10; /* Position the navigation at the bottom of the project-container */
+    left: 0; /* Align the navigation to the left side */
+    right: 0; /* Align the navigation to the right side */
+    }
+    /* Set a fixed width for both buttons */
+    .prev-button,
+    .next-button {
+    width: 100px;
+    background-color: #149ddd;
+    color: white;
+    padding: 2px 10px;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    }
+    .prev-button:hover,
+    .next-button:hover {
+    background-color: #0c7ebd;
+    color: white;
+    }
+    .project-heading {
+    font-size: 15px;
+    color: #149ddd;
+    font-weight: bold;
+    font-style: italic;
+    }
+    /* Additional styles for the white box */
+    .project-container {
+    background-color: #f9f9f9;
+    padding: 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+    position: relative;
+    }
+    /* Separator styles */
+    .project-container::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 50%;
+    border-left: 1px dotted #149ddd;
+    transform: translateX(-50%);
+    }
+    /* Style the headings to appear above the white box */
+    .project-heading {
+    z-index: 1;
+    }
+    /* Split white box into half columns */
+    .half-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px;
+    justify-content: space-between;
+    }
+    /* Adjust the buttons container to stay on the same line */
+    .navigation .half-column:last-child {
+    margin-top: 0px; /* Add spacing between separator and buttons */
+    }
+    /* Center the button and heading */
+    .heading-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0 30px; */ /* Removed the horizontal padding */
+    }
+    .custom-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    }
+    .custom-previous-project,
+    .custom-next-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    /* Set a fixed width for both buttons */
+    .custom-prev-button,
+    .custom-next-button {
+    width: 100px;
+    padding: 2px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    }
+    .custom-project-heading {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #149ddd;
+    font-weight: bold;
+    font-style: italic;
+    }
+    /* Additional styles for the white box */
+    .custom-project-container {
+    background-color: #fff; /* White background color */
+    padding: 3px; /* Add padding around the buttons and headings */
+    text-align: center; /* Center-align the headings */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px; /* Adjust the height as needed */
+    position: relative; /* Set the position to relative for the separator */
+    }
+    /* Separator styles */
+    .custom-project-container::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 50%;
+    border-left: 1px dotted #149ddd; /* Dotted separator color */
+    /* Adjust the separator's position dynamically based on content width */
+    transform: translateX(-50%);
+    }
+    /* Style the headings to appear above the white box */
+    .custom-project-heading {
+    z-index: 1;
+    }
+    /* Split white box into half columns */
+    .custom-half-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Add spacing on both sides of the separator */
+    padding: 0 10px;
+    }
+    /*--------------------------------------------------------------
+    # Navigation Menu
+    --------------------------------------------------------------*/
+    /* Desktop Navigation */
+    .nav-menu {
+    padding: 20px 0 0 0;
+    }
+    .nav-menu-wrapper {
+    display: flex;
+    justify-content: center;
+    }
+    .nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+    .nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+    }
+    .nav-menu a,
+    .nav-menu a:focus {
+    display: flex;
+    align-items: center;
+    color: #a8a9b4;
+    padding: 12px 15px;
+    margin-bottom: 2px;
+    transition: 0.3s;
+    font-size: 15px;
+    }
+    .nav-menu a i,
+    .nav-menu a:focus i {
+    font-size: 24px;
+    padding-right: 8px;
+    color: #6f7180;
+    }
+    .nav-menu a:hover,
+    .nav-menu .active,
+    .nav-menu .active:focus,
+    .nav-menu li:hover > a {
+    text-decoration: none;
+    color: #fff;
+    }
+    .nav-menu a:hover i,
+    .nav-menu .active i,
+    .nav-menu .active:focus i,
+    .nav-menu li:hover > a i {
+    color: #149ddd;
+    }
+    /* Mobile Navigation */
+    .mobile-nav-toggle {
+    position: fixed;
+    right: 3.5%;
+    top: 1%;
+    z-index: 9998;
+    border: 0;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    background-color: #149ddd;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: auto; /* Add this line to align the button to the right */
+    }
+    .mobile-nav-active {
+    overflow: hidden;
+    }
+    .mobile-nav-active #header {
+    left: 0;
+    }
+    .pill-tab {
+    display: inline-block;
+    background-color: #149ddd;
+    padding: 8px 16px;
+    border-radius: 16px;
+    }
+    .pill-tab a {
+    text-decoration: none;
+    color: #fff;
+    display: block; /* Add this line to make the links fill the pill tabs */
+    text-align: center; /* Add this line to center the text within the pill tabs */
+    }
+    @media (max-width: 768px) {
+    .pill-tab {
+    display: block;
+    margin-bottom: 10px; /* Add some spacing between the pill tabs */
+    }
+    }
+    .pill-tab-end {
+    display: inline-block;
+    background-color: #149ddd;
+    padding: 6px 8px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    .pill-tab-end:hover {
+    background-color: #0e7abf;
+    }
+    .pill-tab-end:hover .pill-link-end {
+    color: white; 
+    }
+    .pill-link-end {
+    color: white;
+    font-size: 15px; 
+    }
+    .pill-tab-code {
+    display: inline-block;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 15px 18px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 25px;
+    }
+    .vpn-instructions {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    }
+    .vpn-instructions h6 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    }
+    .vpn-instructions ol {
+    font-size: 16px;
+    margin-left: 30px;
+    }
+    /*--------------------------------------------------------------
+    # Scroll Down Arrow
+    --------------------------------------------------------------*/
+    .scroll-down-arrow {
+    position: absolute;
+    bottom: 30px;
+    right: 15px; /* Updated position */
+    width: 35px; /* Updated width */
+    height: 35px; /* Updated height */
+    border: 2px solid #149ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: arrowBounce 2s infinite;
+    }
+    .scroll-down-arrow:before {
+    content: "";
+    border: solid #149ddd;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    }
+    @keyframes arrowBounce {
+    0% {
+    transform: translate(0, 0);
+    }
+    50% {
+    transform: translate(0, 10px);
+    }
+    100% {
+    transform: translate(0, 0);
+    }
+    }
+    .my-section {
+    --font-color: #149ddd;
+    display: flex;
+    align-items: center;
+    }
+    .my-section,
+    .my-section p {
+    color: var(--font-color);
+    }
+    .my-section i {
+    font-size: 20px;
+    margin-left: 10px; /* Adjust the margin as needed */
+    margin-top: 1.5px; /* Adjust the bottom margin as needed */
+    }
+    /*--------------------------------------------------------------
+    # Hero Section
+    --------------------------------------------------------------*/
+    #hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero-bg.jpg") top center;
+    background-size: cover;
+    }
+    #hero:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    }
+    #hero .hero-container {
+    position: relative;
+    z-index: 2;
+    min-width: 300px;
+    }
+    #hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+    }
+    #hero p {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+    }
+    #hero p span {
+    color: #fff;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #149ddd;
+    }
+    @media (min-width: 1024px) {
+    #hero {
+    background-attachment: fixed;
+    }
+    }
+    @media (max-width: 768px) {
+    #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+    }
+    #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    }
+    }
+    /*--------------------------------------------------------------
+    # Sections General
+    --------------------------------------------------------------*/
+    section {
+    padding: 60px 0;
+    overflow: hidden;
+    }
+    .pill-tab {
+    display: inline-block;
+    background-color: #149ddd;
+    padding: 8px 16px;
+    border-radius: 16px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    }
+    .pill-tab a {
+    text-decoration: none;
+    color: inherit;
+    }
+    .pill-tab:hover {
+    background-color: #1184BA; /* Slightly dimmed background color */
+    color: #fff;
+    }
+    .pill-tab-new {
+    position: relative;
+    display: inline-block;
+    background-color: #149ddd;
+    padding: 10px 48px;
+    border-radius: 18px;
+    margin-top: 5%;
+    top: 20%; /* Adjust the top value to move the pill down */
+    left: 0%; /* Adjust the left value to move the pill to the right */
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    }
+    .pill-link-new {
+    text-decoration: none;
+    color: inherit;
+    }
+    .pill-tab-new:hover {
+    background-color: #1184ba; /* Slightly dimmed background color */
+    }
+    .pill-tab-new:hover .pill-link-new {
+    color: #fff; /* Set the text color to white when hovering */
+    }
+    .section-bg {
+    background: #f5f8fd;
+    }
+    .section-title {
+    padding-bottom: 30px;
+    }
+    .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+    }
+    .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+    }
+    .section-title p {
+    margin-bottom: 0;
+    }
+    .info-list li {
+    position: relative;
+    padding-bottom: 10px; /* Adjust the padding as needed */
+    }
+    .info-list li:not(.no-line)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%; /* Adjust the left position to start from the left side */
+    width: 90%; /* Adjust the width to control the length of the line */
+    height: 0.08px; /* Adjust the height to your desired value */
+    background-color: #c0c1c1; /* Adjust the color as needed */
+    }
+    /*--------------------------------------------------------------
+    # About
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    # About
+    --------------------------------------------------------------*/
+    .about .content h3 {
+    font-weight: 800;
+    font-size: 26px;
+    color: #33537e; /* Set the default text color to black */
+    }
+    .about .content h3 .name-highlight {
+    color: #149ddd; /* Set the name color to blue (#149ddd) */
+    font-size: 28px; /* Increase the font size of the name */
+    }
+    .about .content ul {
+    list-style: none;
+    padding: 0;
+    }
+    .about .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    }
+    .about .content ul strong {
+    margin-right: 10px;
+    }
+    .about .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #149ddd;
+    line-height: 0;
+    }
+    .about .content p:last-child {
+    margin-bottom: 0;
+    }
+    /*--------------------------------------------------------------
+    # Facts
+    --------------------------------------------------------------*/
+    .facts {
+    padding-bottom: 30px;
+    }
+    .facts .count-box {
+    padding: 30px;
+    width: 100%;
+    }
+    .facts .count-box i {
+    display: block;
+    font-size: 44px;
+    color: #149ddd;
+    float: left;
+    line-height: 0;
+    }
+    .facts .count-box span {
+    font-size: 48px;
+    line-height: 40px;
+    display: block;
+    font-weight: 700;
+    color: #050d18;
+    margin-left: 60px;
+    }
+    .facts .count-box p {
+    padding: 15px 0 0 0;
+    margin: 0 0 0 60px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: #122f57;
+    }
+    .facts .count-box a {
+    font-weight: 600;
+    display: block;
+    margin-top: 20px;
+    color: #122f57;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    transition: ease-in-out 0.3s;
+    }
+    .facts .count-box a:hover {
+    color: #1f5297;
+    }
+    /*--------------------------------------------------------------
+    # Akills
+    --------------------------------------------------------------*/
+    @keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+    }
+    #hello {
+    animation: fadeIn 2s;
+    }
+    .skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+    }
+    .skills .progress .skill {
+    padding: 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+    }
+    .skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+    }
+    .skills .progress-bar-wrap {
+    background: #dce8f8;
+    height: 10px;
+    }
+    .skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #149ddd;
+    }
+    /*--------------------------------------------------------------
+    # Resume
+    --------------------------------------------------------------*/
+    .resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #050d18;
+    }
+    .resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #1f5297;
+    position: relative;
+    }
+    .resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+    margin-bottom: 10px;
+    }
+    .resume .resume-item h5 {
+    font-size: 16px;
+    background: #149ddd;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Adjust the value to control the roundness */
+    color: white; /* Set the text color to white */
+    }
+    .resume .resume-item ul {
+    padding-left: 20px;
+    }
+    .resume .resume-item ul li {
+    padding-bottom: 10px;
+    }
+    .resume .resume-item:last-child {
+    padding-bottom: 0;
+    }
+    .resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #1f5297;
+    }
+    .resume .resume-item h5 {
+    font-size: 13px;
+    background: #149ddd;
+    padding: 5px 15px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Adjust the value to control the roundness */
+    color: white; /* Set the text color to white */
+    }
+    .resume .resume-item h5 .year {
+    font-size: 16px; /* Adjust the font size as needed */
+    }
+    .cert-image {
+    position: absolute;
+    top: 33px;
+    right: 0;
+    margin-right: 55%; /* Adjust the value as needed for spacing */
+    }
+    @media screen and (max-width: 768px) {
+    .cert-image {
+    margin-right: 20%; /* Adjust the value for smaller screens */
+    }
+    }
+    /*--------------------------------------------------------------
+    # Portfolio
+    --------------------------------------------------------------*/
+    .portfolio .portfolio-item {
+    margin-bottom: 30px;
+    }
+    .portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    background: #fff;
+    border-radius: 50px;
+    padding: 2px 15px;
+    }
+    .portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #272829;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    }
+    .portfolio #portfolio-flters li:hover,
+    .portfolio #portfolio-flters li.filter-active {
+    color: #149ddd;
+    }
+    .portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+    }
+    .portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    }
+    .portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+    }
+    .portfolio .portfolio-wrap .portfolio-links {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    z-index: 3;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+    }
+    .portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    background: rgba(20, 157, 221, 0.75);
+    transition: 0.3s;
+    width: 100%;
+    }
+    .portfolio .portfolio-wrap .portfolio-links a:hover {
+    background: rgba(20, 157, 221, 0.95);
+    }
+    .portfolio .portfolio-wrap .portfolio-links a + a {
+    border-left: 1px solid #37b3ed;
+    }
+    .portfolio .portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    }
+    .portfolio .portfolio-wrap:hover .portfolio-links {
+    opacity: 1;
+    bottom: 0;
+    }
+    .portfolio .portfolio-wrap .portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #149ddd;
+    padding: 15px;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+    }
+    .portfolio .portfolio-wrap .portfolio-info h5,
+    .portfolio .portfolio-wrap .portfolio-info p {
+    color: #fff;
+    margin: 0;
+    }
+    .portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+    }
+    .portfolio-description h3 {
+    font-size: 24px; 
+    font-weight: bold;
+    }
+    .divider {
+    border-top: 1px dotted #149ddd; /* Change #149ddd to your desired color */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+    /* Add this CSS code to your existing CSS file or create a new file and link it in the HTML */
+    .zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    }
+    .zoom-overlay img {
+    max-height: 95%;
+    max-width: 95%;
+    object-fit: contain;
+    }
+    .zoom-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    }
+    /*--------------------------------------------------------------
+    # Portfolio Details
+    --------------------------------------------------------------*/
+    .portfolio-details {
+    padding-top: 40px;
+    }
+    .portfolio-details .portfolio-details-slider img {
+    width: 100%;
+    }
+    .portfolio-details .portfolio-details-slider  {
+    margin-top: 20px;
+    position: relative;
+    }
+    .portfolio-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #149ddd;
+    }
+    .portfolio-bullet-active {
+    background-color: #149ddd;
+    }
+    .portfolio-details .portfolio-info {
+    padding: 30px;
+    box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+    }
+    .portfolio-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    }
+    .portfolio-details .portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+    }
+    .portfolio-details .portfolio-info ul li + li {
+    margin-top: 10px;
+    }
+    .portfolio-details .portfolio-description {
+    padding-top: 0px;
+    }
+    .portfolio-details .portfolio-description h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    }
+    .portfolio-details .portfolio-description p {
+    padding: 0;
+    }
+    .email {
+    color: #149ddd;
+    }
+    .know-me-more {
+    text-align: center;
+    margin-top: 20px;
+    }
+    .know-me-more h2 {
+    font-size: calc(1.95rem + 8.4vw);
+    opacity: 0.6;
+    }
+    .bottom-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    color: #149ddd; /* Add the desired color for the text */
+    }
+    .item {
+    margin: 0 15%;
+    text-align: center;
+    }
+    .bottom-text p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    }
+    .big-number {
+    font-size: 300%;
+    display: inline-block;
+    }
+    .dotted-line {
+    width: 2px;
+    height: 100px;
+    background-color: transparent;
+    border-left: 1px dotted #149ddd;
+    }
+    @keyframes countUp {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+    @keyframes animateCounter {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+    }
+    #counter {
+    animation: countUp 1s ease-in-out forwards;
+    }
+    .highlighted {
+    background-color: #ebe6e9;
+    font-weight: bold;
+    font-size: 14.5px; /* Adjust the font size as desired */
+    border-radius: 5px; /* Add the border-radius property to create rounded corners */
+    /* Add any additional styling properties here */
+    }
+    /*--------------------------------------------------------------
+    # blog
+    --------------------------------------------------------------*/
+    .blog .icon-box {
+    margin-bottom: 20px;
+    }
+    .blog .icon {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    background: #149ddd;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #149ddd;
+    }
+    .blog .icon i {
+    color: #fff;
+    font-size: 24px;
+    line-height: 0;
+    }
+    .blog .icon-box:hover .icon {
+    background: #fff;
+    }
+    .blog .icon-box:hover .icon i {
+    color: #149ddd;
+    }
+    .blog .title {
+    margin-left: 80px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    }
+    .blog .title a {
+    color: #343a40;
+    }
+    .blog .title a:hover {
+    color: #149ddd;
+    }
+    .blog .description {
+    margin-left: 80px;
+    line-height: 24px;
+    font-size: 14px;
+    }
+    .blog  {
+    margin-top: 30px;
+    }
+    /*--------------------------------------------------------------
+    # blog
+    --------------------------------------------------------------*/
+    /* Styles for the blog section */
+    /* Updated Styles for the blog section */
+    /* Updated Styles for the blog section */
+    /* Updated Styles for the blog section */
+    /* Updated Styles for the blog section */
+    /* Styles for the blog section */
+    .blog .blog-slider {
+    overflow: hidden;
+    }
+    .blog .blog-item {
+    text-align: center;
+    padding: 30px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    }
+    .blog .blog-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    }
+    .blog .blog-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 10px;
+    }
+    .blog .blog-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    }
+    .blog .blog-date,
+    .blog .blog-category {
+    display: block;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+    }
+    .blog .read-more {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #149ddd;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    }
+    .blog .read-more:hover {
+    background-color: #0c7fb0;
+    }
+    .blog .swiper-pagination-custom {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    }
+    /*--------------------------------------------------------------
+    # Contact
+    --------------------------------------------------------------*/
+    .contact {
+    padding-bottom: 130px;
+    }
+    .contact .info {
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    }
+    .contact .info i {
+    font-size: 20px;
+    color: #149ddd;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #dff3fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    }
+    .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #050d18;
+    }
+    .contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #173b6c;
+    }
+    .contact .info .email p {
+    padding-top: 5px;
+    }
+    .contact .info .social-links {
+    padding-left: 60px;
+    }
+    .contact .info .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    margin-right: 10px;
+    }
+    .contact .info .social-links a:hover {
+    background: #149ddd;
+    color: #fff;
+    }
+    .contact .info .email:hover i,
+    .contact .info .address:hover i,
+    .contact .info .phone:hover i {
+    background: #149ddd;
+    color: #fff;
+    }
+    .contact .php-email-form {
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    }
+    .contact .php-email-form .form-group {
+    padding-bottom: 8px;
+    }
+    .contact .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+    }
+    .contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+    }
+    .contact .php-email-form .error-message br + br {
+    margin-top: 25px;
+    }
+    .contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    }
+    .contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+    }
+    .contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    animation: animate-loading 1s linear infinite;
+    }
+    .contact .php-email-form .form-group {
+    margin-bottom: 15px;
+    }
+    .contact .php-email-form label {
+    padding-bottom: 8px;
+    }
+    .contact .php-email-form input,
+    .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    }
+    .contact .php-email-form input {
+    height: 44px;
+    }
+    .contact .php-email-form textarea {
+    padding: 10px 15px;
+    }
+    .contact .php-email-form button[type="submit"] {
+    background: #149ddd;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+    }
+    .contact .php-email-form button[type="submit"]:hover {
+    background: #37b3ed;
+    }
+    @keyframes animate-loading {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+    }
+    /*--------------------------------------------------------------
+    # Breadcrumbs
+    --------------------------------------------------------------*/
+    .breadcrumbs {
+    padding: 20px 0;
+    background: #f9f9f9;
+    }
+    .breadcrumbs h2 {
+    font-size: 26px;
+    font-weight: 300;
+    }
+    .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    }
+    .breadcrumbs ol li + li {
+    padding-left: 10px;
+    }
+    .breadcrumbs ol li + li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #0e2442;
+    content: "/";
+    }
+    @media (max-width: 768px) {
+    .breadcrumbs .d-flex {
+    display: block !important;
+    }
+    .breadcrumbs ol {
+    display: block;
+    }
+    .breadcrumbs ol li {
+    display: inline-block;
+    }
+    }
+    /*--------------------------------------------------------------
+    # Footer
+    --------------------------------------------------------------*/
+    #footer {
+    padding: 15px;
+    color: #f4f6fd;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 9999;
+    background: #040b14;
+    }
+    #footer .copyright {
+    text-align: center;
+    }
+    #footer .credits {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: #eaebf0;
+    }
+    @media (max-width: 1199px) {
+    #footer {
+    position: static;
+    width: auto;
+    padding-right: 20px 15px;
+    }
+    }
